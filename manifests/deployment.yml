@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: encryptedgeekabhipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: encryptedgeekabhipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: encryptedgeekabhipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: encryptedgeekabhipipelinesjavascriptdocker 
+          image: abhicontainer58.azurecr.io/encryptedgeekabhipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
